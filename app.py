@@ -4,8 +4,10 @@ import joblib
 
 st.title("🚧 Soil Slope Stability Risk Assessment")
 # --- About the Model Section ---
+
+    # --- About the Model Section ---
 with st.expander("ℹ️ About the Model & Engineering Physics"):
-    st.markdown("""
+    st.markdown(r"""
     ### 📐 Governing Equation
     This application utilizes a data-driven approach trained on a physics-informed dataset. 
     The underlying synthetic training data was generated using the classical **Limit Equilibrium Method** for infinite slopes:
@@ -23,14 +25,19 @@ with st.expander("ℹ️ About the Model & Engineering Physics"):
     * **$\gamma$** = Soil Unit Weight (kN/m³) — *The weight density of the soil material.*
     
     ---
-    
-    if prediction > 1.5:
-    st.success("🟢 STATUS: STABLE")
-elif 1.0 <= prediction <= 1.5:
-    st.warning("🟡 STATUS: MARGINALLY STABLE")
-else:
-    st.error("🔴 STATUS: UNSTABLE (High Risk of Failure)")
 
+    ### 📊 Factor of Safety ($FoS$) Interpretation Ranges
+    In geotechnical engineering practice, the calculated or predicted stability score falls into these distinct safety thresholds:
+    """)
+
+    # Displaying a clean, readable reference table for the user
+    st.table({
+        "FoS Range": ["FoS < 1.0", "1.0 <= FoS < 1.3", "1.3 <= FoS < 1.5", "FoS >= 1.5"],
+        "Stability Status": ["🔴 Unstable (Active Failure)", "🟡 Marginally Stable / Critical", "🟢 Acceptable (Temporary Slopes)", "🟢 Safe (Permanent Engineering Design)"],
+        "Engineering Action Required": ["Immediate remediation / structural retaining wall needed.", "High risk. Detailed field investigation and monitoring required.", "Suitable for low-risk or short-term excavation projects.", "Standard target threshold met for long-term civil works."]
+    })
+
+    st.markdown(r"""
     ---
     
     ### 🤖 Machine Learning Pipeline (MLOps)
