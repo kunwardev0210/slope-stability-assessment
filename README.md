@@ -60,12 +60,3 @@ The model's real-time outputs are dynamically parsed across standardized civil e
 
 ---
 
-## 📁 Project Directory Structure
-
-```bash
-├── app.py                      # Production Streamlit file (UI layout & real-time inference)
-├── slope_stability_model.pkl    # Frozen serialized binary Random Forest Regressor asset
-├── notebooks/
-│   └── pipeline_notebook.ipynb # Source Jupyter Notebook containing dataset creation & model .fit()
-├── requirements.txt            # Package manifest ensuring automated cloud environment builds
-└── README.md                   # Comprehensive documentation repository
