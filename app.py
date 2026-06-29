@@ -14,7 +14,7 @@ with st.expander("ℹ️ About the Model & Engineering Physics"):
     # Renders the mathematical formula beautifully
     st.latex(r"FoS = \frac{c}{\gamma H} + \frac{\tan(\phi)}{\tan(\beta)}")
     
-    st.markdown("""
+    st.markdown(r"""
     **Parameter Legend:**
     * **$c$** = Soil Cohesion (kPa) — *Resists shearing along the failure surface.*
     * **$\phi$** = Internal Friction Angle (degrees) — *The frictional resistance between soil particles.*
