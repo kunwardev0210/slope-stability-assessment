@@ -24,6 +24,15 @@ with st.expander("ℹ️ About the Model & Engineering Physics"):
     
     ---
     
+    if prediction > 1.5:
+    st.success("🟢 STATUS: STABLE")
+elif 1.0 <= prediction <= 1.5:
+    st.warning("🟡 STATUS: MARGINALLY STABLE")
+else:
+    st.error("🔴 STATUS: UNSTABLE (High Risk of Failure)")
+
+    ---
+    
     ### 🤖 Machine Learning Pipeline (MLOps)
     Instead of calculating the formula directly in the app, this dashboard serves a live **Random Forest Regressor** model:
     1. **Data Generation:** 1,000 synthetic soil profiles were generated using uniform distributions across practical engineering ranges.
