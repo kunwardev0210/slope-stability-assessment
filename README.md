@@ -2,7 +2,7 @@
 
 A high-performance, responsive civil engineering and machine learning web application that predicts the **Factor of Safety (FoS)** for soil profiles in real-time. This project features a **physics-informed data science architecture** that replaces iterative, computationally heavy limit equilibrium calculations with an instant, low-latency machine learning inference layer.
 
-🔗 **Live Deployment URL:** [Streamlit Community Cloud](https://share.streamlit.io/) *(Replace with your actual live link)*
+🔗 **Live Deployment URL:** [Streamlit Community Cloud](https://kunwardev0210-slope-stability-assessment-app-lud3j1.streamlit.app/) 
 
 ---
 
